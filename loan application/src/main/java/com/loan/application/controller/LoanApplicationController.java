@@ -13,8 +13,8 @@ public class LoanApplicationController {
     private LoanApplication loanApplication;
 
     @PostMapping("/apply")
-    public String submitLoanApplication() {
-        Loan loan = new Loan(1L, "John Doe", 50000.0, 36, "Home Renovation");
+    public String submitLoanApplication(@RequestBody Loan loan) {
+        // Loan loan = new Loan(1L, "John Doe", 50000.0, 36, "Home Renovation");
 
         loanApplication.sendLoanApplication(loan);
         return "Application Submitted Successfully";
