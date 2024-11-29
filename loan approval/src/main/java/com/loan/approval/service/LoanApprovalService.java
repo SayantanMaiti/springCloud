@@ -10,7 +10,7 @@ import java.util.function.Function;
 
 @Slf4j
 @Component
-public class LoanApproval {
+public class LoanApprovalService {
     
     public Function<String, String> output() {
         return loanData -> {
